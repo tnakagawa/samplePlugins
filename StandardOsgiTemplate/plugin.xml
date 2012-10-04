@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.pde.ui.pluginContent">
+      <wizard
+            class="standard.osgi.template.PluginContentWizard"
+            id="StandardOsgiTemplate.wizard"
+            name="標準OSGiテンプレート"
+            pureOSGi="true"
+            requiresActivator="true"
+            ui-content="false">
+      </wizard>
+   </extension>
+
+</plugin>
