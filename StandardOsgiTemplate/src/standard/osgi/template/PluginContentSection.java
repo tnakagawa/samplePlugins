@@ -112,4 +112,10 @@ public class PluginContentSection extends OptionTemplateSection {
 	@Override
 	protected void updateModel(IProgressMonitor monitor) throws CoreException {
 	}
+
+	@Override
+	protected String getTemplateDirectory() {
+		return "templates";
+	}
+
 }
