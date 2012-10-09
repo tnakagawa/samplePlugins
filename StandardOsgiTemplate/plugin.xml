@@ -5,11 +5,24 @@
          point="org.eclipse.pde.ui.pluginContent">
       <wizard
             class="standard.osgi.template.PluginContentWizard"
+            icon="icon/action_paste.gif"
             id="StandardOsgiTemplate.wizard"
             name="標準OSGiテンプレート"
             pureOSGi="true"
             requiresActivator="true"
             ui-content="false">
+         <description>
+            &lt;p&gt;このウィザードは、一覧の中から必要なOSGiのサービスを選択すると、そのサービスを取得するテンプレートを生成します。&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;適宜設定されるインポート&lt;/b&gt;&lt;/p&gt;
+&lt;li&gt;org.osgi.framework&lt;/li&gt;
+&lt;li&gt;org.osgi.util.tracker&lt;/li&gt;
+&lt;li&gt;org.osgi.service.log.LogService&lt;/li&gt;
+&lt;li&gt;javax.servlet&lt;/li&gt;
+&lt;li&gt;javax.servlet.http&lt;/li&gt;
+&lt;li&gt;org.osgi.service.http.HttpService&lt;/li&gt;
+&lt;li&gt;org.osgi.service.event.EventAdmin&lt;/li&gt;
+&lt;li&gt;org.osgi.service.cm.ConfigurationAdmin&lt;/li&gt;
+         </description>
       </wizard>
    </extension>
 

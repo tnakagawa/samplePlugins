@@ -46,9 +46,9 @@ public class PluginContentSection extends OptionTemplateSection {
 
 	@Override
 	public void addPages(Wizard wizard) {
-		log.debug("PluginContentSection#addPages>START");
+		log.debug("PluginContentSection#addPages>BEGIN");
 		WizardPage page = createPage(0);
-		page.setTitle("OSGi汎用テンプレート");
+		page.setTitle("標準OSGiテンプレート");
 		page.setDescription("バンドルで使用するサービスにチェックを入れてください。");
 		wizard.addPage(page);
 		markPagesAdded();
@@ -57,7 +57,7 @@ public class PluginContentSection extends OptionTemplateSection {
 
 	@Override
 	public void execute(IProject project, IPluginModelBase model, IProgressMonitor monitor) throws CoreException {
-		log.debug("PluginContentSection#execute>START");
+		log.debug("PluginContentSection#execute>BEGIN");
 		boolean servflg = false;
 		for (int i = 0; i < PKG_OPTIONS.length; i++) {
 			if (getBooleanOption(PKG_OPTIONS[i][0])) {

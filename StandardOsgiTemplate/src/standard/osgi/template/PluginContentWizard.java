@@ -38,7 +38,7 @@ public class PluginContentWizard extends NewPluginTemplateWizard {
 
 	@Override
 	public void dispose() {
-		log.debug("PluginContentWizard#dispose>START:" + project);
+		log.debug("PluginContentWizard#dispose>BEGIN:" + project);
 		try {
 			if (project != null) {
 				// プロジェクト更新
@@ -61,23 +61,20 @@ public class PluginContentWizard extends NewPluginTemplateWizard {
 				OptionTemplateSection section = (OptionTemplateSection) getTemplateSections()[0];
 				
 				// サービス取得判定
-				log.debug("PluginContentWizard#dispose>section(servflg):"
-						+ section.getBooleanOption("servflg"));
+				log.debug("PluginContentWizard#dispose>section(servflg):" + section.getBooleanOption("servflg"));
 				if (section.getBooleanOption("servflg")) {
 					// サービス取得ありなので、ImportPackage修正
 					importPackage += ",org.osgi.util.tracker";
 					
 					// ログサービス取得判定
 					if (section.getBooleanOption("log")) {
-						log.debug("PluginContentWizard#dispose>section(log):"
-								+ section.getBooleanOption("log"));
+						log.debug("PluginContentWizard#dispose>section(log):" + section.getBooleanOption("log"));
 						importPackage += ",org.osgi.service.log";
 					}
 
 					// HTTPサービス取得判定
 					if (section.getBooleanOption("http")) {
-						log.debug("PluginContentWizard#dispose>section(http):"
-								+ section.getBooleanOption("http"));
+						log.debug("PluginContentWizard#dispose>section(http):" + section.getBooleanOption("http"));
 						importPackage += ",javax.servlet";
 						importPackage += ",javax.servlet.http";
 						importPackage += ",org.osgi.service.http";
@@ -85,15 +82,13 @@ public class PluginContentWizard extends NewPluginTemplateWizard {
 
 					// イベントアドミンサービス取得判定
 					if (section.getBooleanOption("event")) {
-						log.debug("PluginContentWizard#dispose>section(event):"
-								+ section.getBooleanOption("event"));
+						log.debug("PluginContentWizard#dispose>section(event):" + section.getBooleanOption("event"));
 						importPackage += ",org.osgi.service.event";
 					}
 
 					// コンフィグアドミンサービス取得判定
 					if (section.getBooleanOption("config")) {
-						log.debug("PluginContentWizard#dispose>section(config):"
-								+ section.getBooleanOption("config"));
+						log.debug("PluginContentWizard#dispose>section(config):" + section.getBooleanOption("config"));
 						importPackage += ",org.osgi.service.cm";
 					}
 				}
@@ -122,9 +117,8 @@ public class PluginContentWizard extends NewPluginTemplateWizard {
 	}
 
 	@Override
-	public boolean performFinish(IProject project, IPluginModelBase model,
-			IProgressMonitor monitor) {
-		log.debug("PluginContentWizard#performFinish>START:" + project);
+	public boolean performFinish(IProject project, IPluginModelBase model, IProgressMonitor monitor) {
+		log.debug("PluginContentWizard#performFinish>BEGIN:" + project);
 		this.project = project;
 		boolean ret = super.performFinish(project, model, monitor);
 		log.debug("PluginContentWizard#performFinish>END:" + ret);
