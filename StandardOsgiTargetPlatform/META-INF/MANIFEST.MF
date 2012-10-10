@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: StandardOsgiTargetPlatform
+Bundle-SymbolicName: StandardOsgiTargetPlatform;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: standard.osgi.target.platform.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.pde.core,
+ org.eclipse.core.resources
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
