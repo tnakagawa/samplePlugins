@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.core.variables.valueVariables">
+      <variable
+            initializerClass="add.execution.environment.EePathValueVariableInitializer"
+            name="CUSTOM_EE_PATH"
+            readOnly="true">
+      </variable>
+   </extension>
+   <extension
+         point="org.eclipse.jdt.launching.vmInstalls">
+      <vmInstall
+            home="${CUSTOM_EE_PATH}/ee.foundation/ee.foundation.ee"
+            id="AddExecutionEnvironment.ee.foundation"
+            name="ee.foundation"
+            vmInstallType="org.eclipse.jdt.launching.EEVMType">
+      </vmInstall>
+      <vmInstall
+            home="${CUSTOM_EE_PATH}/JSR-000219/JSR-000219.ee"
+            id="AddExecutionEnvironment.JSR-000219"
+            name="JSR-000219"
+            vmInstallType="org.eclipse.jdt.launching.EEVMType">
+      </vmInstall>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="add.execution.environment.EeStartup">
+      </startup>
+   </extension>
+
+</plugin>

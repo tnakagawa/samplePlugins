@@ -1,0 +1,21 @@
+# http://wiki.eclipse.org/Execution_Environment_Descriptions
+# The ee.name is used as the JRE name when installing an EE JRE into Eclipse JDT.
+-Dee.name=JSR-000219
+
+# executable
+-Dee.executable=javaw.exe
+-Dee.executable.console=java.exe
+
+# These match osgi defined execution environment identifiers.
+-Dee.class.library.level=
+
+# bootclasspath
+-Dee.bootclasspath=${ee.home}\btclasses.zip;${ee.home}\foundation_security.jar;${ee.home}\jaas.jar;${ee.home}\jce.jar;${ee.home}\jsse-cdc.jar;${ee.home}\sunrsasign.jar
+
+# language level
+-Dee.language.level=1.4
+
+# The root install directory of the runtime environment or development kit.
+# Corresponds to a value that could be used for JAVA_HOME environment variable.
+-Djava.home=${ee.home}
+

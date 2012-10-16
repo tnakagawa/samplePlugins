@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AddExecutionEnvironment
+Bundle-SymbolicName: AddExecutionEnvironment;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: add.execution.environment.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.jdt.launching,
+ org.eclipse.core.variables
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
